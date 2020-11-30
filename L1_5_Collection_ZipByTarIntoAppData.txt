@@ -1,0 +1,4 @@
+@echo off
+
+rem zip data collected about the target environment for transfer  
+tar.exe -cf $env:APPDATA\sales_reports.zip $env:APPDATA\sales_reports.txt

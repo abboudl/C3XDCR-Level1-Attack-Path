@@ -1,0 +1,8 @@
+# Generate SSH Key to allow for non-interactive transfer (no password)
+ssh-keygen.exe --% -q -t rsa -b 4096 -N "" -f C:\Users\Public\x1y2z3
+
+# Read public key to copy and paste to authorized_keys on server
+cat C:\Users\Public\x1y2z3.pub
+
+# Transfer Files using Windows built-in SCP
+scp.exe -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i C:\Users\Public\x1y2z3 $env:APPDATA\sales_reports.zip louai@10.10.99.7:C:\ 2>&1

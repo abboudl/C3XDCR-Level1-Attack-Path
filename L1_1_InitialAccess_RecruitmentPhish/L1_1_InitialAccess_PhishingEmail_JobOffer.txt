@@ -1,0 +1,34 @@
+Subject: CanTel Unlimited - Job Offer
+
+Hi Tim,
+
+I hope you're doing well.
+
+Congratulations! I am very pleased to inform you that you have emerged as our top candidate for the
+Account Executive position. We were very pleased with your performance during the interview process, 
+and we look forward to having you as part of our team!
+
+Attached is a formal job offer as well as a compensation schedule. If you agree with the terms 
+outlined in the offer letter, please email me back a signed copy. I will also require:
+1. The civic address of your residence
+2. The earliest date when you would be ready to begin your employment with us.
+
+Important Note: The attached Excel file is configured to retrieve compensation data from our central
+database. In Excel, this is disabled by default. Before opening the file, open Excel, go into the 
+"File" Menu. At the bottom left corner of the window, select "Options". Click "Trust Center" then 
+"Trust Center Settings" and check the following options:
+1. Enable Automatic Update of All Workbook Links
+2. Enable Dynamic Data Exchange Server Launch
+
+Congratulations again, and I hope to hear back positively from you soon. 
+
+Best,
+
+Noah Stone
+Human Resources
+CanTel Unlimited
+
+
+
+ 
+

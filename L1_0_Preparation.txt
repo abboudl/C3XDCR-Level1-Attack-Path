@@ -1,0 +1,11 @@
+# Preparation Checklist:
+-----------------------
+1. SSH server up and running on attacker host, configured for public key authentication
+2. Python HTTP web server hosting payloads up and running
+	a. python -m http.server --bind 10.10.99.7 80
+3. Two ncat.exe shells open
+	a. ncat.exe -nlvp 45252
+	b. ncat.exe -nlvp 45253
+4. MySQL 5.5 installed on victim machine
+
+

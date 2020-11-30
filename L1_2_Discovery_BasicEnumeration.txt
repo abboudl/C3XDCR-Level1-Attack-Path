@@ -1,0 +1,24 @@
+@echo off
+
+rem Hostname, OS name, version, configuration, and domain
+systeminfo | findstr "[HDO][oS]" 2>&1
+
+rem Current user information: username, membership in local groups, and privileges
+whoami /all 2>&1
+
+rem Network Interface Information
+ipconfig /all 2>&1
+
+rem Existing Routes
+route PRINT 2>&1
+
+rem List of local user accounts
+net user 2>&1
+
+rem Get Active Directory Domain Controller List
+C:\Windows\Sysnative\nltest.exe /dclist:lab.louaiabboud.io 2>&1
+
+rem Check for the existence of security products
+sc query WinDefend 2>&1
+sc query Sysmon 2>&1
+sc query Sysmon64 2>&1

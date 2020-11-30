@@ -1,0 +1,30 @@
+Subject: CanTel Unlimited - Account Executive Interview
+
+Hi Tim,
+
+After our conversation on Linkedin, I had a look at your resume and I think it's time we had an official interview.
+
+I've attached two items in this email. The first is a full job description so you can learn more about the position. The second is a compensation schedule that lays out in detail how you will get compensated should you be offered the Account Executive position including your base salary, yearly bonuses, and the no-cap commission. 
+
+The interview will held in the following Zoom virtual room: <redacted>
+
+Please let me know which one of these dates and time work for you:
+- Wednesday, Nov 23, 2-3PM
+- Wednesday, Nov 23, 3-4PM
+- Thursday, Nov 24, 10-11AM
+
+Finally, an important note: The attached Excel file is configured to retrieve compensation data from our central
+database. In Excel, this is disabled by default. Before opening the file, open Excel, go into the 
+"File" Menu. At the bottom left corner of the window, select "Options". Click "Trust Center" then 
+"Trust Center Settings" and check the following options:
+1. Enable Automatic Update of All Workbook Links
+2. Enable Dynamic Data Exchange Server Launch
+
+I look forward to our interview. 
+
+Best,
+
+Noah Stone
+Human Resources
+CanTel Unlimited
+
