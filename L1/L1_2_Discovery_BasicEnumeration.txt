@@ -16,7 +16,7 @@ rem List of local user accounts
 net user 2>&1
 
 rem Get Active Directory Domain Controller List
-C:\Windows\Sysnative\nltest.exe /dclist:lab.louaiabboud.io 2>&1
+C:\Windows\Sysnative\nltest.exe /dclist:c3xdcr.local 2>&1
 
 rem Check for the existence of security products
 sc query WinDefend 2>&1
