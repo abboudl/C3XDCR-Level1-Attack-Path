@@ -3,7 +3,8 @@
 1. SSH server up and running on attacker host, configured for public key authentication
 2. Python HTTP web server hosting payloads up and running
 	a. python3 -m http.server --bind 10.0.1.4 8080
-3. Two nc shells open
+3. Three nc shells open
+        a. nc -nlvp 4444
 	a. nc -nlvp 45252
 	b. nc -nlvp 45253
 
